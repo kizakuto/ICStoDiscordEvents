@@ -48,7 +48,12 @@ GUILD_ID=YOUR_DISCORD_GUILD_ID
 
 ### 1. sample.ics ファイル（または任意の .ics ファイル）を用意します。
 
-### 2. Discord サーバー上でボットを起動して、次のコマンドを実行
+### 2. Discord ボットを起動して、イベント作製コマンドを実行します。
+ボットを起動します。
+```bash
+python bot.py
+```
+Discordサーバーのチャンネルで以下のテキストを送信します。
 ```diff
 !create_events
 ```
