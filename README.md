@@ -44,7 +44,7 @@ GUILD_ID=YOUR_DISCORD_GUILD_ID
 python bot.py
 ```
 Discordサーバーのチャンネルで以下のテキストを送信します。
-```diff
+```discord
 !create_events
 ```
 
