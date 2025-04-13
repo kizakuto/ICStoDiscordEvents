@@ -15,34 +15,27 @@
 
 ## 📦 インストール
 
-### 1. 仮想環境の作成（推奨）
-
+### 1. レポジトリをクローン
 ```bash
-python -m venv venv
-source venv/bin/activate  # Windows の場合は venv\Scripts\activate
+git clone https://github.com/kizakuto/ICStoDiscordEvents.git
 ```
+gitがインストールされていない場合はインストールして下さい。
 
 ### 2. 必要なライブラリをインストール
 
 ```bash
 pip install discord.py ics python-dotenv
 ```
-またはrequirements.txt を使って
-```bash
-discord.py
-ics
-python-dotenv
-```
 
 ## ⚙️ 設定ファイル
-.env ファイルをプロジェクトのルートに作成し、以下のように設定します
+.env ファイルをプロジェクトのルートに作成し、以下のように設定します。
 ```ini
 DISCORD_TOKEN=YOUR_DISCORD_BOT_TOKEN
 GUILD_ID=YOUR_DISCORD_GUILD_ID
 ```
 
 - DISCORD_TOKEN: Discord Developer Portal で取得したボットトークン
-- GUILD_ID: イベントを作成する対象のサーバー（ギルド）のID
+- GUILD_ID: イベントを作成する対象のサーバーのID（サーバー一覧からサーバーアイコンを右クリックしてIDをコピーできます。）
 
 ## 🧠 使用方法
 
@@ -63,7 +56,7 @@ Discordサーバーのチャンネルで以下のテキストを送信します�
 ## ⚠️ 注意点
 - ボットに スケジュールイベントの作成権限 があることを確認してください。
 - Discordの仕様により、過去の日付のイベントは作成できません。
-- Discordの使用により、100件より多くのイベントは作成できません。.icsファイルに100件より多くの項目がある場合、処理途中からイベント作製ができなくなります。
+- Discordの仕様により、100件より多くのイベントは作成できません。.icsファイルに100件より多くの項目がある場合、処理途中からイベント作製ができなくなります。
 - .ics ファイルのフォーマットが正しくないと失敗します。
 
 
@@ -87,6 +80,5 @@ END:VCALENDAR
 ├── bot.py              # メインのBotコード
 ├── sample.ics          # サンプルのiCalendarファイル
 ├── .env                # トークンなどの設定ファイル
-├── requirements.txt    # 必要なパッケージ
 └── README.md           # このファイル
 ```
