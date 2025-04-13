@@ -62,6 +62,20 @@ GUILD_ID=YOUR_DISCORD_GUILD_ID
 - .ics ファイルのフォーマットが正しくないと失敗します。
 
 
+## 🧪 例: .ics ファイルの内容
+```ics
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:サンプルイベント
+DTSTART;TZID=Asia/Tokyo:20250420T140000
+DTEND;TZID=Asia/Tokyo:20250420T150000
+LOCATION:理科室
+DESCRIPTION:化学実験デモ
+END:VEVENT
+END:VCALENDAR
+```
+
+
 ## 📂 ファイル構成
 ``` bash
 .
